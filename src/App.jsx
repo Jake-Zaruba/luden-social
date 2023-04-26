@@ -4,29 +4,19 @@ import Register from "./pages/register/Register";
 import Layout from "./Layout";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
+import AuthRequired from "./AuthRequired";
 
 function App() {
-  const currentUser = true;
-  const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
-      return <Navigate to="/login" />;
-    }
-  };
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Layout />
-            </ProtectedRoute>
-          }
-        >
-          <Route path="home" element={<Home />} />
-          <Route path="profile/:id" element={<Profile />} />
+        <Route element={<AuthRequired />}>
+          <Route path="/" element={<Layout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="profile/:id" element={<Profile />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
