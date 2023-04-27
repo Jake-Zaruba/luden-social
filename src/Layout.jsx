@@ -9,7 +9,10 @@ const Layout = () => {
       <Navbar />
       <div style={{ display: "flex" }}>
         <LeftMenu />
-        <Outlet />
+        <div style={{ flex: 6 }}>
+          <Outlet />
+        </div>
+
         <RightMenu />
       </div>
     </>

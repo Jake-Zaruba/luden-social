@@ -7,10 +7,11 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import MessageIcon from "@mui/icons-material/Message";
 import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
 import ImageIcon from "@mui/icons-material/Image";
+import WatchLaterIcon from "@mui/icons-material/WatchLater";
 
 const LeftMenu = () => {
   return (
-    <div className="left-bar">
+    <div className="left-menu">
       <div className="container">
         <div className="menu">
           <div className="user">
@@ -55,6 +56,10 @@ const LeftMenu = () => {
           <div className="item">
             <ImageIcon className="icon" />
             <span>Gallery</span>
+          </div>
+          <div className="item">
+            <WatchLaterIcon className="icon" />
+            <span>Memories</span>
           </div>
         </div>
       </div>

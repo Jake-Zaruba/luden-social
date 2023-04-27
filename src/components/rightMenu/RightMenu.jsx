@@ -1,7 +1,7 @@
 import "./rightMenu.scss";
 
 const RightMenu = () => {
-  return <div>RightMenu</div>;
+  return <div className="right-menu">RightMenu</div>;
 };
 
 export default RightMenu;
