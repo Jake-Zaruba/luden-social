@@ -5,7 +5,7 @@ import RightMenu from "./components/rightMenu/RightMenu";
 
 const Layout = () => {
   return (
-    <>
+    <div className="theme-dark">
       <Navbar />
       <div style={{ display: "flex" }}>
         <LeftMenu />
@@ -15,7 +15,7 @@ const Layout = () => {
 
         <RightMenu />
       </div>
-    </>
+    </div>
   );
 };
 
